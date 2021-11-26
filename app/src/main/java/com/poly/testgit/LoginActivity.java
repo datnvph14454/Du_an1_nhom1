@@ -12,7 +12,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-        tv.setText("hello wolrd");
+//        tv.setText("hello wolrd");
 
 
     }
