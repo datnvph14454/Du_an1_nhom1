@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Đăng Nhập"
+        android:text="Đăng Ký"
         android:textSize="36sp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="User name"
-            android:id="@+id/edt_Lg_user"
+            android:id="@+id/edt_Re_user"
             android:textSize="18sp"
             android:textColor="@color/black"
             />
@@ -43,17 +43,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="password"
-            android:id="@+id/edt_Lg_pass"
+            android:id="@+id/edt_Re_pass"
             android:textSize="18sp"
             android:textColor="@color/black"
             android:inputType="textPassword"
             />
-        <CheckBox
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lưu tài khoản"
-            android:id="@+id/chk_save"
-            android:layout_gravity="left"/>
+            android:hint="re-password"
+            android:id="@+id/edt_Re_repass"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,21 +69,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="đăng ký"
-                android:layout_weight="1"
-                android:textSize="24sp"
-                android:id="@+id/btn_Lg_DangKy"
-                android:backgroundTint="#FF00B0FF"
-                />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Đăng Nhập"
-                android:id="@+id/btn_Lg_DangNhap"
-                android:layout_marginLeft="10dp"
+                android:id="@+id/btn_Re_DangKy"
                 android:layout_weight="1"
                 android:textSize="24sp"
                 android:backgroundTint="#FF00B0FF"
                 />
+
+
 
 
         </LinearLayout>
