@@ -97,7 +97,13 @@ public class UserDAO {
         }
         return 1;
     }
-
+    //check login
+    public int checkLogin(String username, String password){
+        int result = db.delete(TABLE_NAME,"username=? AND password=?",new String[]{username,password});
+        if (result == 0)
+            return -1;
+        return 1;
+    }
 
 
 }
