@@ -4,27 +4,33 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item android:title="Home">
+            <menu>
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_baseline_assessment_24"
             android:title="Thống Kê" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_thongke"
             android:title="Ghi chú" />
+            </menu>
+        </item>
     </group>
-    <group android:checkableBehavior="single">
+    <item android:title="Giới Thiệu">
+        <menu>
         <item
             android:id="@+id/nav_gioithieu"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Giói Thiệu" />
+            android:icon="@drawable/ic_thongke"
+            android:title="Giới Thiệu" />
         <item
             android:id="@+id/nav_thoat"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_thoat"
             android:title="Thoát" />
-    </group>
+        </menu>
+    </item>
 </menu>
