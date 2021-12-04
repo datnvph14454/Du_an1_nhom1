@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.poly.testgit">
+    package="com.poly.testgit" >
 
     <application
         android:allowBackup="true"
@@ -8,15 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Testgit">
-        <activity android:name=".LoginActivity">
-
+        android:theme="@style/Theme.Testgit" >
+        <activity
+            android:name=".user.RegisterActivity"
+            android:exported="true" />
+        <activity android:name=".user.LoginActivity" >
         </activity>
         <activity
             android:name=".NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/Theme.Testgit.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

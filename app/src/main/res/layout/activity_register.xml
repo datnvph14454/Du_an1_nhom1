@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    tools:context=".user.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/logo_duan1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng Ký"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User name"
+            android:id="@+id/edt_Re_user"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:id="@+id/edt_Re_pass"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="re-password"
+            android:id="@+id/edt_Re_repass"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="đăng ký"
+                android:id="@+id/btn_Re_DangKy"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:backgroundTint="#FF00B0FF"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
