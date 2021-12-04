@@ -4,12 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
-        android:layout_height="211dp"
+        android:layout_height="100dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/logo_duan1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:layout_weight="1"
+        android:text="Đăng nhập"
+        android:textAlignment="center"
+        android:textColor="#27D5EC"
+        android:textSize="34sp" />
+
 </LinearLayout>
