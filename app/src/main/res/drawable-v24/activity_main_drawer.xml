@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Quản lý Phiếu mượn" />
+        <item
+            android:id="@+id/nav_chi"
+            android:icon="@drawable/ic_thu_chi"
+            android:title="Quản lý Loại sách" />
+        <item
+            android:id="@+id/nav_thu"
+            android:icon="@drawable/ic_baseline_wysiwyg_24"
+            android:title="Quản lý Sách" />
+        <item
+            android:id="@+id/nav_thongke"
+            android:icon="@drawable/ic_thongke"
+            android:title="Quấn lý thành viên" />
+
+    </group>
+    <item android:title="Thống kê">
+        <menu>
+            <item android:title="Top 10 sách mượn nhiều nhất "
+                android:id="@+id/nav_gioi"
+                android:icon="@drawable/ic_thongke"
+                />
+            <item android:title="Doanh thu"
+                android:id="@+id/nav_th"
+                android:icon="@drawable/ic_menu_manage"
+                />
+        </menu>
+    </item>
+    <item android:title="Người dùng">
+        <menu>
+            <item android:title="Đổi mật khẩu "
+                android:id="@+id/nav_gioithieu"
+                android:icon="@drawable/ic_menu_share"
+                />
+            <item android:title="Đăng xuất"
+                android:id="@+id/nav_thoat"
+                android:icon="@drawable/ic_thoat"
+                />
+        </menu>
+    </item>
+</menu>
