@@ -38,72 +38,33 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        btn_Lg_DangKy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-
-            }
-        });
-
-
-
-
         btn_Lg_DangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(LoginActivity.this, "Đăng nhập thành công",Toast.LENGTH_LONG).show();
-                new Handler().postDelayed(() -> {
-
+            public void onClick(View v) {
+                String userName = edt_Lg_user.getText().toString();
+                String passWord = edt_Lg_pass.getText().toString();
+                if (userName.isEmpty()) {
+                    edt_Lg_user.setError("Bạn hãy nhập tài khoản");
+                    edt_Lg_user.requestFocus();
+                } else if (passWord.isEmpty()) {
+                    edt_Lg_pass.setError("Bạn hãy nhập mật khẩu");
+                    edt_Lg_pass.requestFocus();
+                }
+                if (userDAO.checkLogin(userName, passWord) == true) {
+                    Toast.makeText(getApplicationContext(), "Đăng nhập thành công ", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this, NavigationDrawerActivity.class));
-                    finish();
-                },1500);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Tài khoản hoặc mật khẩu không chính xác", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
-    }
-    public void checkLogin(View v){
-        userRegster = new RegisterActivity();
-        String strUser = userRegster.edt_Re_user.getText().toString();
-        String strPass = userRegster.edt_Re_pass.getText().toString();
-
-        strUser = edt_Lg_user.getText().toString();
-        strPass = edt_Lg_pass.getText().toString();
-
-        if(strUser.isEmpty() || strPass.isEmpty()){
-
-            Toast.makeText(getApplicationContext(), "Tên đăng nhập hoặc mật khẩu không chính xác", Toast.LENGTH_LONG).show();
-
-        }else{
-            if(userDAO.checkLogin(strUser, strPass) > 0){
-                Toast.makeText(getApplicationContext(), "Đăng nhập thành công", Toast.LENGTH_LONG).show();
-                finish();
+        btn_Lg_DangKy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
-            if(strUser.equalsIgnoreCase(edt_Lg_user.toString()) && strPass.equalsIgnoreCase(edt_Lg_pass.toString())){
-                rememberUser(strUser,strPass,chk_save.isChecked());
-                    finish();
-
-            }else{
-                Toast.makeText(getApplicationContext(), "Tên đăng nhâp hoặc mật khẩu không đúng", Toast.LENGTH_LONG).show();
-            }
-
-
-
-        }
-
-
+        });
     }
-    public void rememberUser(String u, String p, boolean status){
-        SharedPreferences pref = getSharedPreferences("USER_FILE",MODE_PRIVATE);
-        SharedPreferences.Editor edit = pref.edit();
-        if(!status){
-            edit.clear();
 
-        }else{
-            edit.putString("USERNAME", u);
-            edit.putString("PASSWORD", p);
-            edit.putBoolean("REMEMBER", status);
-        }
-        edit.commit();
-    }
+
 }
